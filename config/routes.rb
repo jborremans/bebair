@@ -1,5 +1,8 @@
 Air::Application.routes.draw do
 
+get "sessions/new"
+post "session/create"
+get "session/destroy"
 
   resources :users
 
