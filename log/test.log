@@ -1,0 +1,231 @@
+  [1m[36m (3.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "flights"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "flights" ("number", "departure_airport_code", "departs_at", "arrival_airport_code", "distance", "created_at", "updated_at", "id") VALUES (1, 'MyString', '2012-08-07 12:05:14.000000', 'MyString', 1, '2012-08-09 21:41:29', '2012-08-09 21:41:29', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "flights" ("number", "departure_airport_code", "departs_at", "arrival_airport_code", "distance", "created_at", "updated_at", "id") VALUES (1, 'MyString', '2012-08-07 12:05:14.000000', 'MyString', 1, '2012-08-09 21:41:29', '2012-08-09 21:41:29', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2012-08-09 21:41:29', '2012-08-09 21:41:29', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2012-08-09 21:41:29', '2012-08-09 21:41:29', 298486374)[0m
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (2.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "flights"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "flights" ("number", "departure_airport_code", "departs_at", "arrival_airport_code", "distance", "created_at", "updated_at", "id") VALUES (1, 'MyString', '2012-08-07 12:05:14.000000', 'MyString', 1, '2012-08-09 21:41:31', '2012-08-09 21:41:31', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "flights" ("number", "departure_airport_code", "departs_at", "arrival_airport_code", "distance", "created_at", "updated_at", "id") VALUES (1, 'MyString', '2012-08-07 12:05:14.000000', 'MyString', 1, '2012-08-09 21:41:31', '2012-08-09 21:41:31', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2012-08-09 21:41:31', '2012-08-09 21:41:31', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2012-08-09 21:41:31', '2012-08-09 21:41:31', 298486374)[0m
+  [1m[35m (51.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFlight Load (0.5ms)[0m  SELECT "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "flights" [0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFlight Load (0.1ms)[0m  SELECT "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "flights" [0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFlight Load (0.1ms)[0m  SELECT "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFlight Load (0.1ms)[0m  [1mSELECT "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FlightsController#index as HTML
+  [1m[35mFlight Load (0.2ms)[0m  SELECT "flights".* FROM "flights" 
+ERROR: compiling _app_views_flights_index_html_erb__839739520114704352_2172021820 RAISED /Users/josephborremans/rails_projects/ca/bebair/app/views/flights/index.html.erb:38: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/josephborremans/rails_projects/ca/bebair/app/views/flights/index.html.erb:40: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_flights_index_html_erb__839739520114704352_2172021820(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "flights/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h2>Daily Flight Schedule</h2>
+
+<div id="search">
+	<label for="keyword">Search:</label><input type="text" name="keyword" placeholder="Enter an Airport Code" size="30">
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>
+      <th>Flight Number</th>
+      <th>Leaves</th>
+      <th>Time</th>
+      <th>Arrives</th>
+      <th>Time</th>
+      <th>Seats Remaining</th>
+      <th>Miles</th>
+    </tr>
+  </thead>
+  <tbody>
+');@output_buffer.append=  @flights.each do |flight| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <tr>
+      <td>'); if flight.bookable? ;@output_buffer.safe_concat('<button>Book Now</button></td>
+      <td>');@output_buffer.append= ( flight.number );@output_buffer.safe_concat('</td>
+      <td>');@output_buffer.append= ( flight.number_airport_code );@output_buffer.safe_concat('</td>
+      <td>');@output_buffer.append= ( flight.departs_at.localtime.strftime("%l:%M %P") );@output_buffer.safe_concat('</td>
+      <td>flight.arrival_airport_code</td>
+      <td>');@output_buffer.append= ( flight.arrives_at.localtime.strftime("%l:%M %P") );@output_buffer.safe_concat('</td>
+      <td>');@output_buffer.append= ( flights.seats_remaining );@output_buffer.safe_concat('</td>
+      <td>flight.distance</td>
+    </tr>
+    <tr>
+');       end 
+@output_buffer.safe_concat('  </tbody>
+</table>
+
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_view/template.rb:285:in `module_eval'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_view/template.rb:285:in `compile'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_view/template.rb:233:in `compile!'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_view/template.rb:142:in `block in render'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/notifications.rb:123:in `instrument'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_view/template.rb:141:in `render'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/notifications.rb:123:in `instrument'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activerecord-3.2.3/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:414:in `_run__4171952021916136239__process_action__662022395541461070__callbacks'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/notifications.rb:123:in `instrument'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activerecord-3.2.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/abstract_controller/base.rb:121:in `process'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/test_case.rb:463:in `process'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/test_case.rb:49:in `process'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/actionpack-3.2.3/lib/action_controller/test_case.rb:380:in `get'
+/Users/josephborremans/rails_projects/ca/bebair/test/functional/flights_controller_test.rb:9:in `block in <class:FlightsControllerTest>'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/minitest/unit.rb:949:in `run'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/test/unit/testcase.rb:17:in `run'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/testing/setup_and_teardown.rb:35:in `block in run'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:469:in `_run__2097215411322276152__setup__2449367567566840074__callbacks'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:385:in `_run_setup_callbacks'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/josephborremans/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/gems/activesupport-3.2.3/lib/active_support/testing/setup_and_teardown.rb:34:in `run'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/minitest/unit.rb:787:in `block in _run_suite'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/minitest/unit.rb:780:in `map'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/minitest/unit.rb:780:in `_run_suite'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/test/unit.rb:565:in `block in _run_suites'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/test/unit.rb:563:in `each'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/test/unit.rb:563:in `_run_suites'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/minitest/unit.rb:746:in `_run_anything'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/minitest/unit.rb:909:in `run_tests'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/minitest/unit.rb:896:in `block in _run'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/minitest/unit.rb:895:in `each'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/minitest/unit.rb:895:in `_run'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/minitest/unit.rb:884:in `run'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/test/unit.rb:21:in `run'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/test/unit.rb:326:in `block (2 levels) in autorun'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/test/unit.rb:27:in `run_once'
+/Users/josephborremans/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/test/unit.rb:325:in `block in autorun'
+Completed 500 Internal Server Error in 16ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFlight Load (0.1ms)[0m  [1mSELECT "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFlight Load (0.1ms)[0m  SELECT "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFlight Load (0.1ms)[0m  [1mSELECT "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"MyString", "name"=>"MyString", "password_digest"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+SQLite3::SQLException: near "SAVEPOINT": syntax error: SAVEPOINT active_record_1
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" 
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+SQLite3::SQLException: near "SAVEPOINT": syntax error: SAVEPOINT active_record_1
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "980190962"]]
+  Rendered users/_form.html.erb (102.8ms)
+Completed 200 OK in 148ms (Views: 147.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.9ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"MyString", "name"=>"MyString", "password_digest"=>"[FILTERED]"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+SQLite3::SQLException: near "SAVEPOINT": syntax error: SAVEPOINT active_record_1
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
